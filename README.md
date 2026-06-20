@@ -174,3 +174,30 @@ https://files.catbox.moe/abc123.jpg
 ## 📄 License
 
 MIT
+
+---
+
+## ⚖️ Disclaimer
+
+This MCP server is an **unofficial community tool** and is **not affiliated with, endorsed by, or sponsored by Catbox LLC**.
+
+### Your Responsibilities
+
+By using this tool, you agree to comply with [Catbox's Terms of Service](https://catbox.moe/legal.php):
+
+- **You own your content** — you must have the right to upload, share, and store any files you upload via this tool
+- **No illegal use** — do not upload copyrighted content without permission, malware, spyware, or any material that violates applicable laws
+- **No commercial use** — Catbox prohibits commercial use of their service without prior written approval from Catbox Executives
+- **No reselling** — you may not resell or supply Catbox services to others
+- **No abuse** — do not spam, harass, or damage Catbox's infrastructure
+
+### No Warranty
+
+This tool is provided **"AS IS"**, without any express or implied warranty. The authors are not responsible for:
+
+- Any content uploaded or shared through this tool
+- Any loss of data, files, or access to Catbox services
+- Any damages arising from the use or inability to use this tool
+- Any violations of Catbox's Terms of Service by end users
+
+**Use at your own risk.** If you have concerns about specific content or usage, contact Catbox at **admin@catbox.moe**.
