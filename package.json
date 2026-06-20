@@ -1,0 +1,18 @@
+{
+  "name": "catbox-mcp-server",
+  "version": "1.0.0",
+  "description": "Catbox.moe MCP Server - 文件上传托管服务",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "catbox-mcp-server": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "axios": "^1.6.0",
+    "form-data": "^4.0.0"
+  }
+}

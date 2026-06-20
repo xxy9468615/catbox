@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "catbox": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "catbox-mcp-server@latest"
+      ],
+      "type": "stdio",
+      "env": {
+        "CATBOX_USERHASH": "你的猫盒哈希值，可在环境变量配置，调用时可覆盖"
+      }
+    }
+  }
+}
