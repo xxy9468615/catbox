@@ -208,6 +208,6 @@ This tool is provided **"AS IS"**, without any express or implied warranty. The 
 
 Catbox.moe provides a **free** file hosting service with no accounts required. If you find this service useful, consider supporting them:
 
-- **Donate via PayPal**: [https://catbox.moe/donate.php](https://catbox.moe/donate.php)
+- **Ko-fi**: [https://ko-fi.com/catboxmoe](https://ko-fi.com/catboxmoe)
 - **Spread the word** — tell others about Catbox!
 - **Follow their rules** — be a responsible user so the service stays alive for everyone ❤️
