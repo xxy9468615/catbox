@@ -5,6 +5,9 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server for [Ca
 [![npm version](https://img.shields.io/npm/v/catbox-mcp-server)](https://www.npmjs.com/package/catbox-mcp-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+> ⚠️ **File & album management (delete, edit, organize) requires a Catbox userhash.**  
+> You can get one for free by uploading a file at [catbox.moe](https://catbox.moe) — no account registration needed. See [Getting Your Userhash](#-getting-your-userhash) below.
+
 ---
 
 ## ✨ Features
@@ -27,7 +30,7 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server for [Ca
 | `remove_from_album` | Remove files from an album | ✅ |
 | `delete_album` | Delete an album | ✅ |
 
-> **Auth** refers to whether a Catbox **userhash** is required. Anonymous uploads and album creation are supported, but management operations require a userhash.
+> **🔑 Auth = Userhash required.** Operations marked with ✅ need your Catbox userhash for authentication. You can pass it per-call or set `CATBOX_USERHASH` environment variable as a default.
 
 ## 📦 Installation
 
@@ -80,11 +83,20 @@ Add to your `mcpServers` config:
 
 > **💡 Tip:** You can always override the userhash per-tool call by passing it as a parameter — the environment variable is just a convenient default.
 
-### Getting Your Userhash
+### 🔑 Getting Your Userhash
 
-1. Upload any file to [Catbox.moe](https://catbox.moe)
-2. The response will include your `userhash`
-3. Save it and use it in subsequent API calls to manage your files and albums
+Catbox uses a simple **userhash** system — no traditional account with password required.
+
+1. Go to [Catbox.moe](https://catbox.moe)
+2. Click **"Upload"** or select any file from your computer
+3. After upload completes, the page displays your **userhash** (a hex string like `a1b2c3d4e5f6...`)
+4. **Save this hash** — it's your key to manage files and albums
+5. You can also retrieve your userhash by uploading via API — the response includes it
+
+> **🔐 Why you need it:**
+> - **Delete files** — only the owner (identified by userhash) can delete
+> - **Edit albums** — add/remove files, change title/description
+> - **Without userhash** — you can still upload and create albums, but you won't be able to modify them later
 
 ## 🚀 Usage Examples
 
