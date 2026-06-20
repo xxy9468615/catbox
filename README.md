@@ -201,3 +201,13 @@ This tool is provided **"AS IS"**, without any express or implied warranty. The 
 - Any violations of Catbox's Terms of Service by end users
 
 **Use at your own risk.** If you have concerns about specific content or usage, contact Catbox at **admin@catbox.moe**.
+
+---
+
+## ☕ Support Catbox
+
+Catbox.moe provides a **free** file hosting service with no accounts required. If you find this service useful, consider supporting them:
+
+- **Donate via PayPal**: [https://catbox.moe/donate.php](https://catbox.moe/donate.php)
+- **Spread the word** — tell others about Catbox!
+- **Follow their rules** — be a responsible user so the service stays alive for everyone ❤️
