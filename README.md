@@ -5,10 +5,25 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server for [Ca
 [![npm version](https://img.shields.io/npm/v/catbox-mcp-server)](https://www.npmjs.com/package/catbox-mcp-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> ⚠️ **File & album management (delete, edit, organize) requires a Catbox userhash.**  
-> You can get one for free by uploading a file at [catbox.moe](https://catbox.moe) — no account registration needed. See [Getting Your Userhash](#-getting-your-userhash) below.
+[![npm version](https://img.shields.io/npm/v/catbox-mcp-server)](https://www.npmjs.com/package/catbox-mcp-server)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
+
+## ⚠️ Important: Anonymous vs Authenticated
+
+Catbox has two user tiers. Understanding this is key:
+
+| Capability | 🕶️ Anonymous | 🔑 With Userhash |
+|-----------|:---:|:---:|
+| **Upload files** | ✅ | ✅ |
+| **Delete files** | ❌ | ✅ |
+| **Create album** | ✅ (but **cannot** edit/delete later) | ✅ (fully manageable) |
+| **Edit album** | ❌ | ✅ |
+| **Add/remove album files** | ❌ | ✅ |
+| **Delete album** | ❌ | ✅ |
+
+You can get a free userhash by uploading any file to [Catbox.moe](https://catbox.moe) — see [Getting Your Userhash](#-getting-your-userhash).
 
 ## ✨ Features
 
@@ -20,17 +35,17 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server for [Ca
 
 ## 🧰 Tools
 
-| Tool | Description | Auth Required |
-|------|-------------|:---:|
-| `url_upload` | Upload a file from a direct URL | ❌ |
-| `delete_files` | Delete uploaded files | ✅ |
-| `create_album` | Create a new album | ❌ |
-| `edit_album` | Edit an existing album | ✅ |
-| `add_to_album` | Add files to an album | ✅ |
-| `remove_from_album` | Remove files from an album | ✅ |
-| `delete_album` | Delete an album | ✅ |
+| Tool | Description |
+|------|-------------|
+| `url_upload` | Upload a file from a publicly accessible URL |
+| `delete_files` | Delete uploaded files (userhash required) |
+| `create_album` | Create a new album |
+| `edit_album` | Edit album title/description/files (userhash required) |
+| `add_to_album` | Add files to an album (userhash required) |
+| `remove_from_album` | Remove files from an album (userhash required) |
+| `delete_album` | Delete an album (userhash required) |
 
-> **🔑 Auth = Userhash required.** Operations marked with ✅ need your Catbox userhash for authentication. You can pass it per-call or set `CATBOX_USERHASH` environment variable as a default.
+See the [userhash guide](#-getting-your-userhash) to set up authentication for management tools.
 
 ## 📦 Installation
 
@@ -85,18 +100,18 @@ Add to your `mcpServers` config:
 
 ### 🔑 Getting Your Userhash
 
-Catbox uses a simple **userhash** system — no traditional account with password required.
+No account registration required — you get a userhash just by using Catbox:
 
 1. Go to [Catbox.moe](https://catbox.moe)
-2. Click **"Upload"** or select any file from your computer
-3. After upload completes, the page displays your **userhash** (a hex string like `a1b2c3d4e5f6...`)
-4. **Save this hash** — it's your key to manage files and albums
-5. You can also retrieve your userhash by uploading via API — the response includes it
+2. Upload **any file** from your computer (or use this API to upload a URL)
+3. After upload, the page displays your **userhash** — a hex string like `a1b2c3d4e5f6...`
+4. **Save it** and use it with any management tool
+5. You can also get the userhash from the API response when uploading without one
 
-> **🔐 Why you need it:**
-> - **Delete files** — only the owner (identified by userhash) can delete
-> - **Edit albums** — add/remove files, change title/description
-> - **Without userhash** — you can still upload and create albums, but you won't be able to modify them later
+> **💡 Without userhash:** You can upload files and create albums, but:
+> - You **cannot** delete any files
+> - Albums created anonymously are **permanent and unmodifiable** — no edits, no deletions
+> - To manage anything, you need your userhash
 
 ## 🚀 Usage Examples
 
