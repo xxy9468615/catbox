@@ -1,11 +1,11 @@
 {
   "name": "catbox-mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Catbox.moe MCP Server - 文件上传托管服务",
   "type": "module",
   "main": "index.js",
   "bin": {
-    "catbox-mcp-server": "./index.js"
+    "catbox-mcp-server": "index.js"
   },
   "scripts": {
     "start": "node index.js"
