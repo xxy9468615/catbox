@@ -5,9 +5,6 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server for [Ca
 [![npm version](https://img.shields.io/npm/v/catbox-mcp-server)](https://www.npmjs.com/package/catbox-mcp-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-[![npm version](https://img.shields.io/npm/v/catbox-mcp-server)](https://www.npmjs.com/package/catbox-mcp-server)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
 ---
 
 ## ⚠️ Important: Anonymous vs Authenticated
